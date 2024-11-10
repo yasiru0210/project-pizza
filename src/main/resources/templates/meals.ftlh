@@ -69,7 +69,5 @@
             </div>
         </body>
     </body>
-    <footer>
-        <a href="https://github.com/sourcels/spring-pizza" target="_blank">Project on GitHub</a>
-    </footer>
+
 </html>
