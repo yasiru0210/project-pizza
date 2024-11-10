@@ -1,0 +1,52 @@
+.pizzeria-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.pizzeria-details dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.pizzeria-details dt {
+    font-weight: bold;
+}
+
+.add-meals-container {
+    margin-top: 20px;
+}
+
+.add-meals-container form {
+    display: flex;
+    align-items: center;
+}
+
+.add-meals-container label {
+    margin-right: 10px;
+}
+
+.meals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.meals-table th, .meals-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.meals-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.not-found {
+    color: #dc3545;
+    font-weight: bold;
+}

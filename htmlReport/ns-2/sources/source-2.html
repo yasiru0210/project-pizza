@@ -1,0 +1,170 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > OpenAPIConfig</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.pizza.config</a>
+</div>
+
+<h1>Coverage Summary for Class: OpenAPIConfig (com.example.pizza.config)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">OpenAPIConfig</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/19)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">OpenAPIConfig$$SpringCGLIB$$0</td>
+  </tr>
+  <tr>
+    <td class="name">OpenAPIConfig$$SpringCGLIB$$FastClass$$0</td>
+  </tr>
+  <tr>
+    <td class="name">OpenAPIConfig$$SpringCGLIB$$FastClass$$1</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/19)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.pizza.config;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;import org.springframework.beans.factory.annotation.Value;
+&nbsp;import org.springframework.context.annotation.Bean;
+&nbsp;import org.springframework.context.annotation.Configuration;
+&nbsp;
+&nbsp;import io.swagger.v3.oas.models.OpenAPI;
+&nbsp;import io.swagger.v3.oas.models.info.Contact;
+&nbsp;import io.swagger.v3.oas.models.info.Info;
+&nbsp;import io.swagger.v3.oas.models.info.License;
+&nbsp;import io.swagger.v3.oas.models.servers.Server;
+&nbsp;
+&nbsp;@Configuration
+<b class="fc">&nbsp;public class OpenAPIConfig {</b>
+&nbsp;
+&nbsp;    @Value(&quot;${pizza.example.dev-url}&quot;)
+&nbsp;    private String devUrl;
+&nbsp;
+&nbsp;    @Value(&quot;${pizza.example.prod-url}&quot;)
+&nbsp;    private String prodUrl;
+&nbsp;
+&nbsp;    @Bean
+&nbsp;    public OpenAPI myOpenAPI() {
+<b class="fc">&nbsp;        Server devServer = new Server();</b>
+<b class="fc">&nbsp;        devServer.setUrl(devUrl);</b>
+<b class="fc">&nbsp;        devServer.setDescription(&quot;Server URL in Development environment&quot;);</b>
+&nbsp;
+<b class="fc">&nbsp;        Server prodServer = new Server();</b>
+<b class="fc">&nbsp;        prodServer.setUrl(prodUrl);</b>
+<b class="fc">&nbsp;        prodServer.setDescription(&quot;Server URL in Production environment&quot;);</b>
+&nbsp;
+<b class="fc">&nbsp;        Contact contact = new Contact();</b>
+<b class="fc">&nbsp;        contact.setEmail(&quot;siperdima2@gmail.com&quot;);</b>
+<b class="fc">&nbsp;        contact.setName(&quot;sourcels&quot;);</b>
+<b class="fc">&nbsp;        contact.setUrl(&quot;https://github.com/sourcels&quot;);</b>
+&nbsp;
+<b class="fc">&nbsp;        License mitLicense = new License().name(&quot;MIT License&quot;).url(&quot;https://choosealicense.com/licenses/mit/&quot;);</b>
+&nbsp;
+<b class="fc">&nbsp;        Info info = new Info()</b>
+<b class="fc">&nbsp;                .title(&quot;Pizza-Panel&quot;)</b>
+<b class="fc">&nbsp;                .version(&quot;1.0&quot;)</b>
+<b class="fc">&nbsp;                .contact(contact)</b>
+<b class="fc">&nbsp;                .description(&quot;Pizza-Panel&quot;).termsOfService(&quot;https://github.com/sourcels&quot;)</b>
+<b class="fc">&nbsp;                .license(mitLicense);</b>
+&nbsp;
+<b class="fc">&nbsp;        return new OpenAPI().info(info).servers(List.of(devServer, prodServer));</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-10-01 07:44</div>
+</div>
+</body>
+</html>
