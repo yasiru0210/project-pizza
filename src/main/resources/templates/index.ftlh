@@ -99,7 +99,7 @@
     </body>
 
     <footer>
-        <a href="https://github.com/sourcels/spring-pizza" target="_blank">Project on GitHub</a>
+        <a href="https://github.com/yasiru0210/icet-Final-project" target="_blank">Project on GitHub</a>
     </footer>
     </body>
 </html>
